@@ -1,0 +1,88 @@
+{
+	"pages": [
+		{
+			"path": "pages/Tab1",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/Tab2",
+			"style": {
+				"navigationBarTitleText": "Tab2"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationStyle": "default",
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "演示",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"usingComponents":{}
+		// "renderingMode": "seperated", // 仅微信小程序，webrtc 无法正常时尝试强制关闭同层渲染
+		// "pageOrientation": "portrait", // 横屏配置，全局屏幕旋转设置(仅 APP/微信/QQ小程序)，支持 auto / portrait / landscape
+		// "rpxCalcMaxDeviceWidth": 960,
+		// "rpxCalcBaseDeviceWidth": 375,
+		// "rpxCalcIncludeWidth": 750
+	},
+	"tabBar": {
+		"color": "#505050",
+		"selectedColor": "#25B1D8",
+		"borderStyle": "white",
+		// "backgroundColor": "#ffffff",
+		// "height": "50px",
+		// "fontSize": "10px",
+		// "iconWidth": "24px",
+		// "spacing": "3px",
+		"list": [
+			{
+				"pagePath": "pages/Tab1",
+				"iconPath": "static/images/home-outline.png",
+				"selectedIconPath": "static/images/home.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/Tab2",
+				"iconPath": "static/images/account-outline.png",
+				"selectedIconPath": "static/images/account.png",
+				"text": "Tab2"
+			},
+	  ],
+		// "midButton": {
+		// 	"width": "80px",
+		// 	"height": "50px",
+		// 	"text": "文字",
+		// 	"iconPath": "static/images/midButton_iconPath.png",
+		// 	"iconWidth": "24px",
+		// 	"backgroundImage": "static/images/midButton_backgroundImage.png"
+		// }
+	},
+	"easycom": {
+		"autoscan": true, // 自动扫描组件
+		"custom": { // 扫描规则
+			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue" // uni-ui
+		}
+	},
+  "topWindow": {
+    "path": "responsive/top-window.vue",
+    "style": {
+      "height": "44px"
+    }
+  },
+  "leftWindow": {
+    "path": "responsive/left-window.vue",
+    "style": {
+      "width": "300px"
+    }
+  },
+  "rightWindow": {
+    "path": "responsive/right-window.vue",
+    "style": {
+      "width": "300px"
+    },
+    "matchMedia": {
+      "minWidth": 768
+    }
+  }
+}
